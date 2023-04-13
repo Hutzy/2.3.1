@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Service
-public class CarService {
+public class CarService implements CarServiceImpl {
 
     private final List<Car> cars = Arrays.asList(
             new Car("car1", "color1", 1900),
