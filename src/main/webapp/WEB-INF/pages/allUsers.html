@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p></p>
+<p></p>
+<div>
+
+<!--    <th:block th:each="user : ${user}">-->
+<!--        <ul>-->
+<!--            <li>id: <span th:text="*{user.getId()}">ID</span></li>-->
+<!--            <li>name: <span th:text="*{user.getFirstName()}">Name</span></li>-->
+<!--            <li>Lastname: <span th:text="*{user.getLastName}">Lastname</span></li>-->
+<!--            <li>Workplace : <span th:text="*{user.getAge()}">age</span></li>-->
+<!--            <a th:href="@{/users/{id}/edit(id=${user.getId()})}">Edit user data</a>-->
+<!--            <form th:method="DELETE" th:action="@{/users/{id}(id=${user.getId()})}">-->
+<!--                <input type="submit" value="Delete user"/>-->
+<!--            </form>-->
+<!--        </ul>-->
+<!--    </th:block>-->
+
+    <div th:each = "user : ${user}">
+        <a th:href="@{/users/{id}(id=${user.getId()})}" th:text="${user.getFirstName()}">user</a>
+    </div>
+
+    <form th:action="@{/users/new}" method="get">
+        <button type="submit">Создать пользователя</button>
+    </form>
+</div>
+</body>
+</html>
+
+

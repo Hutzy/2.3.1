@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en,ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/users/new}" th:object="${user}">
+    <input name="firstName" th:field="*{firstName}" id="firstName" type="text" />
+    &nbsp;FirstName
+    <br />
+    <input name="lastName" th:field="*{lastName}" id="lastName" type="text" />
+    &nbsp;LastName
+    <br />
+    <input name="age" th:field="*{age}" id="age" type="number" />
+    &nbsp;Age
+    <br />
+    <input type="submit" value="Add Person" />
+</form>
+
+</body>
+</html>
